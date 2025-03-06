@@ -4,6 +4,7 @@
   "ui.options.multiplayer.enableNewChatMenu": "Nowe menu czatu",
   "ui.options.multiplayer.enableNewChatMenu.tooltip": "Nowe menu czatu wykorzystuje ImGui. Jest konfigurowalny, elegancki i niesamowity!",
   "ui.options.multiplayer.enablePosSmoother": "Włącz wygładzanie pozycji pojazdu",
+  "ui.options.multiplayer.enablePosSmoother.tooltip": "Próbuje wygładzić dane o pozycji graczy z niestabilnym połączeniem, redukując wypaczenia pojazdu",
   "ui.options.multiplayer.autoSyncVehicles": "Włącz automatyczną synchronizację części",
   "ui.options.multiplayer.autoSyncVehicles.tooltip": "Jeśli ta opcja jest włączona, części Twojego pojazdu zostaną automatycznie zsynchronizowane z innymi graczami po kilku sekundach",
   "ui.options.multiplayer.queueSpawnEdit": "Włącz kolejkowanie aktualizacji/edycji pojazdów gracza",
@@ -129,5 +130,6 @@
   "ui.multiplayertos.info1": "Aby uzyskać więcej informacji, koniecznie sprawdź nasze",
   "ui.multiplayertos.info2": "Więcej informacji znajdziesz także na naszej stronie",
   "ui.common.multiplayer.sync": "Synchronizuj",
+  "ui.apps.categories.multiplayer": "Tryb wieloosobowy",
   "ui.camera.mode.passenger": "Pasażer"
 }
