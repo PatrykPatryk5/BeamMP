@@ -60,9 +60,9 @@ local function setDefaultUnicycle(configFileName)
 end
 
 local defaultSettings = {
-	autoSyncVehicles = true, nameTagShowDistance = true, enableBlobs = true, showSpectators = true, nametagCharLimit = 32,
+	autoSyncVehicles = true, nameTagShowDistance = true, enableBlobs = true, showSpectators = true, nametagCharLimit = 32, showPlayerIDs = false,
 	-- queue system
-	enableSpawnQueue = true, enableQueueAuto = true, queueSkipUnicycle = true, queueApplySpeed = 2, queueApplyTimeout = 3,
+	enableSpawnQueue = true, enableQueueAuto = true, queueSkipUnicycle = true, queueApplySpeed = 2, queueApplyTimeout = 3, highlightQueuedPlayers = true,
 	-- colors
 	showBlobQueued = true, blobColorQueued = "#FF6400", showBlobIllegal = true, blobColorIllegal = "#000000", showBlobDeleted = true, blobColorDeleted = "#333333",
 
@@ -80,6 +80,10 @@ local defaultSettings = {
 
 	disableInstabilityPausing = true,
 
+	refreshIngame = false,
+
+	playerlistLeftclick = 0, -- 0 - queue events, 1 - switch camera, 2 - open forum, 3 - delete, 4 - restore, 5 - copy name
+
 	launcherPort = 4444
 }
 
@@ -91,6 +95,12 @@ local function onExtensionLoaded()
 		--settings.impl.defaults[k] = { 'local', v }
 		--settings.impl.defaultValues[k] = v
 	end
+
+	if settings.getValue("queueWithLMB") ~= nil then
+		settings.setValue("playerlistLeftclick", settings.getValue("queueWithLMB") and 0 or 1)
+		settings.setValue("queueWithLMB", nil)
+	end
+
 	--dump(defaultSettings)
 	settings.impl.invalidateCache()
 end
